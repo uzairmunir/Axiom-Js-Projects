@@ -2,17 +2,17 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #d4d4d4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  background-color: #cfcfcf !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100vh !important;
 }
 .container {
-  border: 1px solid rgb(230, 227, 227);
+  margin-top: 25px;
   background-color: white;
   border-radius: 5px;
-  min-width: 400px;
+  max-width: 450px !important;
 }
 .form {
   padding: 25px;
@@ -20,33 +20,41 @@ body {
 .form > h2 {
   text-align: center;
   color: rgb(104, 101, 101);
+  margin-bottom: 10px;
 }
-.form-control {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0px;
-}
-.form-control > label {
-  font-size: 20px;
-  color: #888888;
-}
-.form-control > input {
-  padding: 5px 0px;
-  width: 100%;
-}
+
 .btn {
-  display: block;
-  margin: 0px auto;
-  width: 70%;
-  border-radius: 5px;
-  background-color: rgb(64, 152, 224);
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 15px;
+  display: block !important;
+  margin: 0px auto !important;
+  width: 40% !important;
+  border-radius: 5px !important;
+  background-color: rgb(64, 152, 224) !important;
+  padding: 10px !important;
+  cursor: pointer !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+  font-size: 15px !important;
 }
-.form-control > input:focus {
+.btn:hover {
+  background-color: gray !important;
+  color: #efefef !important;
+}
+.form-group > small {
+  visibility: hidden;
+}
+.form-group > input:focus {
   outline: 0px;
+}
+.form-group > small {
+  color: rgb(218, 67, 67) !important;
+}
+.form-group.error > input {
+  border-color: rgb(218, 10, 10) !important;
+}
+.form-group.success > input {
+  border-color: rgb(35, 182, 35) !important;
+}
+.form-group.error > small {
+  visibility: visible;
 }
