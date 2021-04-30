@@ -18,6 +18,11 @@ const showSuccess = (input) => {
   const formGroup = input.parentElement;
   formGroup.className = 'form-group success';
 };
+// Function to check if email is valid
+function isValidEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   // Validating First Name
