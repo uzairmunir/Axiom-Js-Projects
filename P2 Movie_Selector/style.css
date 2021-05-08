@@ -34,7 +34,7 @@ body {
 }
 
 .seat.selected {
-  background-color: #c3e0e5;
+  background-color: #1ea87f;
 }
 
 .seat.occupied {
@@ -94,7 +94,7 @@ body {
 
 .container {
   perspective: 1000px;
-
+  padding: 0px 50px;
   margin-bottom: 50px;
 }
 
