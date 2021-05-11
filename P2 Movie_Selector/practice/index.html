@@ -13,6 +13,7 @@
       <label for="movie">Please Select a Movie</label>
       <!--DropDown to Select Movies-->
       <select id="movie">
+        <option value="" disabled selected hidden>Select Movie</option>
         <option value="30">Top Gun</option>
         <option value="40">Star Wars</option>
         <option value="35">No Time To Die</option>
@@ -37,7 +38,63 @@
       <!--Container for Seating Theater Map-->
       <div class="container">
         <!-- This is the class to show the Movie Screen -->
-        <div class="screen"></div>
+        <div class="screen">
+          <iframe
+            class="movie-decs"
+            id="movie1"
+            width="100%"
+            height="70px"
+            src="https://www.youtube.com/embed/qSqVVswa420"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="movie-decs"
+            id="movie2"
+            width="100%"
+            height="70px"
+            src="https://www.youtube.com/embed/8Qn_spdM5Zg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="100%"
+            height="70px"
+            class="movie-decs"
+            id="movie3"
+            src="https://www.youtube.com/embed/BIhNsAtPbPI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="100%"
+            height="70px"
+            class="movie-decs"
+            id="movie4"
+            src="https://www.youtube.com/embed/wb49-oV0F78"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="100%"
+            height="70px"
+            id="movie5"
+            class="movie-decs"
+            src="https://www.youtube.com/embed/-FZ-pPFAjYY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <!-- 6 Rows x 8 Columns Seating Chart -->
         <div class="row">
           <div class="seat">1</div>
@@ -105,6 +162,9 @@
       You have selected <span id="count">0</span> seats for a total price of
       $<span id="total">0</span>.
     </p>
+
+    <!--Additional-->
+
     <script src="./app.js"></script>
   </body>
 </html>

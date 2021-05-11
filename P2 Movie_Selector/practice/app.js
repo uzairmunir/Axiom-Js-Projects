@@ -3,6 +3,12 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
+const movie1 = document.getElementById('movie1');
+const movie2 = document.getElementById('movie2');
+const movie3 = document.getElementById('movie3');
+const movie4 = document.getElementById('movie4');
+const movie5 = document.getElementById('movie5');
+console.log(movie1);
 let ticketPrice = +movieSelect.value;
 
 populateUI();
@@ -65,3 +71,17 @@ container.addEventListener('click', (e) => {
 
 // Calculate initial number of seats and total price
 updateSelectedCount();
+// Function to display Movies
+movieSelect.addEventListener('change', (e) => {
+  let style1 = e.target.value == 30 ? 'block' : 'none';
+  let style2 = e.target.value == 40 ? 'block' : 'none';
+  let style3 = e.target.value == 35 ? 'block' : 'none';
+  let style4 = e.target.value == 25 ? 'block' : 'none';
+  let style5 = e.target.value == 20 ? 'block' : 'none';
+
+  movie1.style.display = style1;
+  movie2.style.display = style2;
+  movie3.style.display = style3;
+  movie4.style.display = style4;
+  movie5.style.display = style5;
+});

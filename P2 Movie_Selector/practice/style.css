@@ -107,3 +107,6 @@ p.text span {
 .row {
   display: flex;
 }
+.movie-decs {
+  display: none;
+}
