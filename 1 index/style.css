@@ -1,0 +1,31 @@
+body {
+  background-color: #efefef;
+}
+nav {
+  background-color: rgb(56, 123, 139) !important;
+  color: white;
+  height: 70px;
+  width: 100% !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+.nav-div {
+  display: flex !important;
+  justify-content: space-between !important;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+}
+.nav-div > a {
+  color: black;
+  font-size: large;
+  text-decoration: none;
+}
+.card {
+  margin: 10px 0px;
+}
+.card-img {
+  height: 100px;
+
+  object-fit: contain !important;
+}

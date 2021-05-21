@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+  </head>
+  <body>
+    <h1>Custom Video Player</h1>
+    <!-- This is the video player. Poster attribute gives the thumbnail and src gives location of the actual video -->
+    <video
+      src="./video/kurlus.mp4"
+      id="video"
+      class="screen"
+      poster="./image/posture.jpg"
+    ></video>
+    <!-- Adding custom controls for the video player -->
+    <div class="controls">
+      <!-- This is the play button -->
+      <button class="btn" id="play">
+        <!-- Font Awesome Play Icon -->
+        <i class="fa fa-play fa-2x"></i>
+      </button>
+      <!-- This is the stop button -->
+      <button class="btn" id="stop">
+        <!-- Font Awesome Stop Icon -->
+        <i class="fa fa-stop fa-2x"></i>
+      </button>
+      <!-- This is the progress bar -->
+      <input
+        type="range"
+        id="progress"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+      />
+      <!-- This is the time duration -->
+      <span class="timestamp" id="timestamp">00:00</span>
+    </div>
+  </body>
+</html>

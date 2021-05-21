@@ -56,3 +56,4 @@ movieSelect.addEventListener('change', (e) => {
   setMovieData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
 });
+updateSelectedCount();

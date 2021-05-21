@@ -35,6 +35,7 @@ body {
 
 .seat.selected {
   background-color: #1ea87f;
+  text-decoration: line-through;
 }
 
 .seat.occupied {
