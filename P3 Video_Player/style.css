@@ -65,6 +65,13 @@ h1 {
 }
 .controls > input {
   flex: 1;
+  cursor: pointer;
+}
+.full-screen-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(194, 193, 193);
 }
 
 @media (max-width: 800px) {
