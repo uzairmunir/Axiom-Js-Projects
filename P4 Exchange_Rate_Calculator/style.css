@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: lightgray;
+  background-color: #b5d4eb;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ p {
   cursor: pointer;
   border-radius: 5px;
   font-size: 12px;
-  padding: 5px 10px;
+  padding: 8px 25px;
 }
 
 .currency {
