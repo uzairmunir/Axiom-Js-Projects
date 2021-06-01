@@ -11,11 +11,13 @@ const calculate = () => {
   const currencyOneCode = currencyOne.value;
   const currencyTwoCode = currencyTwo.value;
   fetch(
-    ` https://v6.exchangerate-api.com/v6/51497476eca5e4e1c1293582/pair/${currencyOneCode}/${currencyTwoCode}`
+    `  https://v6.exchangerate-api.com/v6/51497476eca5e4e1c1293582/pair/${currencyOneCode}/${currencyTwoCode}`
   )
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       const conversionRate = data.conversion_rate;
+      console.log(conversionRate);
       rate.innerText = `1 ${currencyOneCode}=${conversionRate} ${currencyTwoCode}`;
       currencyTwoAmount.value = (
         currencyOneAmount.value * conversionRate

@@ -110,3 +110,24 @@ p.text span {
 .movie-decs {
   display: none;
 }
+@media only screen and (max-width: 500px) {
+  .showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 5px;
+    border-radius: 5px;
+    color: #5885af;
+    list-style-type: none;
+    display: flex;
+  }
+  .movie-container {
+    padding: 0px 10px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .container {
+    perspective: 1000px;
+    padding: 0px 50px;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+}

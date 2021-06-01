@@ -17,15 +17,25 @@ nav {
   text-align: center;
 }
 .nav-div > a {
-  color: black;
+  color: rgb(230, 218, 218);
   font-size: large;
   text-decoration: none;
 }
 .card {
   margin: 10px 0px;
+  border-radius: 10px !important;
 }
 .card-img {
   height: 100px;
-
   object-fit: contain !important;
+}
+@media (max-width: 400px) {
+  nav {
+    padding: 0px;
+    margin: 0px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

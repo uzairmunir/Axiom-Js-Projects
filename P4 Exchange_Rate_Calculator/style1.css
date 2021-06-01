@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   height: 100vh;
   margin: 0;
   padding: 20px;
@@ -18,33 +18,15 @@ body {
 }
 
 h1 {
-  color: darkgreen;
+  color: rgb(0, 97, 100);
 }
 
 p {
   text-align: center;
 }
 
-.btn {
-  color: white;
-  background-color: darkgreen;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 8px 25px;
-}
-.btn1 {
-  color: white;
-  background-color: darkgreen;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 12px;
-  padding: 8px 25px;
+.btn > a {
   text-decoration: none;
-}
-.link {
-  text-decoration: none;
-  color: white;
 }
 
 .currency {
@@ -85,22 +67,29 @@ input:focus,
 button:focus {
   outline: 0;
 }
-@media (max-width: 400px) {
-  h1 {
-    color: darkgreen;
-    text-align: center;
-    align-items: center;
-  }
 
-  p {
-    text-align: center;
-  }
-  .container {
-    max-width: 70%;
-  }
-  .swap-rate-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 10px;
-  }
+.table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+  overflow: scroll;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 15px;
+}
+tr:nth-child(even) {
+  background-color: #e7e5e5;
+  color: white;
+}
+tr:nth-child(even):hover {
+  background-color: black;
+  color: white;
+}
+tr:nth-child(odd):hover {
+  background-color: #3394d5;
+  color: white;
 }
