@@ -1,0 +1,171 @@
+:root {
+  --model-duration: 1s;
+  --primary-color: #227093;
+  --secondary-color: #d1ccc0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  transition: transform 0.5s ease;
+}
+body.show-nav {
+  transform: translate(200px);
+}
+nav {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  width: 200px;
+  top: 0;
+  left: 0;
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: white;
+  position: fixed;
+  z-index: 100;
+  transform: translateX(-100%);
+}
+nav .logo {
+  padding: 30px 0px;
+  text-align: center;
+}
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+nav ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+nav ul li {
+  padding: 20px;
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+}
+nav ul li:first-of-type {
+  border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+header {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 40px 15px;
+  color: white;
+  font-size: 150%;
+  position: relative;
+}
+button {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+button:focus {
+  outline: none;
+}
+.toggle {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+.cta-btn {
+  padding: 10px 30px;
+  font-size: 24px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.model-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  animation-name: openModel;
+  animation-duration: var(--model-duration);
+}
+
+.model-container.show-model {
+  display: block;
+}
+
+.model {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.model-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+}
+
+.model-header h3 {
+  margin: 0;
+  /* border-bottom: 1px solid var(--secondary-color); */
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.model-form div {
+  margin: 15px 0;
+}
+
+.model-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.model-form input {
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.close-btn {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  color: white;
+}
+
+@keyframes openModel {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
