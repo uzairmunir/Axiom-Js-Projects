@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(42, 42, 42, 0.9);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.flex {
+  display: flex;
+}
+input,
+button {
+  border: 1px solid white;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px 10px;
+  margin: 0;
+  font-style: 18px;
+}
+input[type='text'] {
+  width: 300px;
+}
+#search-btn {
+  background-color: white;
+  border-left: 0;
+  border-radius: 0;
+  cursor: pointer;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#random-btn {
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+  grid-gap: 20px;
+}
+.meal {
+  cursor: pointer;
+  position: relative;
+  height: 180px;
+  width: 180px;
+  text-align: center;
+}
+.meal img {
+  height: 100%;
+  width: 100%;
+  border: 2px white solid;
+  border-radius: 5px;
+}
+.meal-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.meal:hover .meal-info {
+  opacity: 1;
+}
+.selected-meal-details {
+  margin: 30px auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selected-meal-details img {
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.selected-meal-info {
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dotted white;
+  text-align: center;
+}
+
+.selected-meal-instructions {
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.selected-meal-instructions ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.selected-meal-instructions ul li {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  input[type='text'] {
+    width: 100%;
+  }
+}
