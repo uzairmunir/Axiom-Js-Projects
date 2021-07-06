@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <h4>Account Balance</h4>
+      <h2 id="total-balance">$00.00</h2>
+      <div class="credit-debit-container">
+        <div>
+          <h4>Credit</h4>
+          <p id="money-credit" class="money credit">$00.00</p>
+        </div>
+        <div>
+          <h4>Debit</h4>
+          <p id="money-debit" class="money debit">-$00.00</p>
+        </div>
+      </div>
+      <h3>History</h3>
+      <ul class="list" id="list">
+        <!-- <li class="credit">
+          Salary <span>$5000</span> <button class="del-btn">X</button>
+        </li>
+        <li class="debit">
+          Dinner <span>$1000</span> <button class="del-btn">X</button>
+        </li> -->
+      </ul>
+      <h3>Add Transaction</h3>
+      <form id="add-form">
+        <div class="form-control">
+          <label for="reason">Description</label>
+          <input
+            type="text"
+            id="reason"
+            placeholder="Enter reason of transaction"
+          />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+        <button class="add-btn" type="submit">Add Transaction</button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
