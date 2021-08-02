@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="music-container">
+        <h2 id="title">Music Title</h2>
+        <h3 id="artist">Artist</h3>
+        <div class="img-container">
+          <img src="./img/royaa.jpg" alt="" />
+        </div>
+        <audio src="./music/royaan.m4a" id="audio"></audio>
+        <div class="progress" id="progress">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="volume-container">
+          <i class="fas fa-volume-up" id="volume-up"></i>
+          <input
+            type="range"
+            class="slider"
+            id="volume"
+            title="volume"
+            step="1"
+          />
+        </div>
+        <div class="music_controls">
+          <i class="fas fa-backward" id="prev" title="Previous"></i>
+          <i class="fas fa-play main_button" id="play" title="Play"></i>
+          <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
