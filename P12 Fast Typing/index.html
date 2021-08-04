@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast Typing</title>
+  </head>
+  <body>
+    <button class="setting-btn" id="setting-btn">
+      <i class="fas fa-tools fa-2x"></i>
+    </button>
+    <div class="setting hide" id="setting">
+      <form id="form">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </form>
+    </div>
+    <div class="container">
+      <h2>Fast Typing Game</h2>
+      <p>Type this word as fast as you can:</p>
+      <h1 id="word"></h1>
+      <input
+        type="text"
+        id="user-word"
+        placeholder="Please type here"
+        autocomplete="off"
+      />
+      <p class="timer">Remaining Time <span id="time"></span></p>
+      <p class="score-board">Score <span id="score"></span></p>
+    </div>
+    <div class="game-over" id="game-over"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
