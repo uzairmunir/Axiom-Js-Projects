@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+h1 {
+  position: relative;
+}
+h1 button#add-btn {
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+}
+h1 button#clear-btn {
+  position: absolute;
+  right: 20;
+  transform: translate(120%, -50%);
+}
+.btn {
+  cursor: pointer;
+  background-color: #e2e2e2;
+  border: 1px solid #a2a2a2;
+  border-radius: 5px;
+  padding: 5px 10;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 20px;
+}
+.card-container {
+  perspective: 1000px;
+  position: relative;
+  height: 300px;
+  width: 500px;
+  max-width: 100%;
+}
+.card {
+  position: absolute;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  left: 0;
+  transform: translateX(50%) rotate(-10deg);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.card.active {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+  z-index: 10;
+}
+.card-left {
+  transform: translateX(50%) rotate(10deg);
+}
+.card.show-answer .card-inside {
+  transform: rotateX(180deg);
+}
+.card-inside {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.5 ease;
+}
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+.card-front {
+  transform: rotateX(0);
+}
+.card-back {
+  transform: rotateX(180deg);
+}
+.card-front::after,
+.card-back::after {
+  content: '\f021 FLIP';
+  position: absolute;
+  font-family: 'Font Awesome 5 Free', Courier, monospace;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #a2a2a2;
+  letter-spacing: 1.3px;
+}
+
+.nav {
+  display: flex;
+  margin: 30px 0;
+}
+.nav-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.nav p {
+  margin: 0 20px;
+}
+.add-card-container {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  transition: 0.5 ease;
+  opacity: 0;
+  z-index: -1;
+}
+.add-card-container.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+.add-card-container h1 {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  margin: 20px 0 10px;
+}
+
+textarea {
+  border: 1px solid #a2a2a2;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  min-width: 500px;
+  max-width: 100%;
+}
