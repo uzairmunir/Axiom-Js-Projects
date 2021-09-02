@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Api</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--Title of Page-->
+      <h1>Web Api</h1>
+      <!--Button to toggle custom text-->
+      <button class="btn btn-toggle" id="toggle">Toggle</button>
+      <!--div to display custom text container-->
+      <div class="custom-text" id="custom-text-container">
+        <!--Button to close custom text container-->
+        <button class="btn-close" id="close-btn">x</button>
+        <!--Heading for change voice-->
+        <h3>Change Voice</h3>
+        <!--Add voice  using js-->
+        <select id="voices"></select>
+        <!--Custom text field-->
+        <textarea
+          id="text"
+          class="text"
+          placeholder="Please provide your custom text for the Web Speech API Reader"
+        ></textarea>
+        <!--Button to read custom text-->
+        <button id="read" class="btn">Read</button>
+      </div>
+      <!--This is where JS will create HTML code for image buttons to be read-->
+      <main id="main"></main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
